@@ -1,0 +1,38 @@
+appBar: PreferredSize(
+            preferredSize: Size.fromHeight(100),
+            child: Container(
+              height: 50,
+              color: Colors.grey,
+              child: Padding(
+                padding: EdgeInsets.only(left: 20, right: 20, top: 5),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu,
+                      color: Colors.white,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Appbar Title',
+                            style:
+                                TextStyle(color: Colors.black, fontSize: 18)),
+                        SizedBox(
+                          height: 3,
+                        ),
+                        Text('Subtitile ',
+                            style:
+                                TextStyle(color: Colors.black, fontSize: 14)),
+                      ],
+                    ),
+                    Icon(
+                      Icons.search,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
