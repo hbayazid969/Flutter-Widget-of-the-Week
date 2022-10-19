@@ -1,0 +1,25 @@
+extendBodyBehindAppBar: true,
+          appBar: AppBar(
+            actions: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Icon(Icons.favorite),
+              )
+            ],
+            elevation: 0,
+            leading: Icon(Icons.menu),
+            toolbarHeight: 60,
+            centerTitle: true,
+            backgroundColor: Colors.transparent,
+            title: Text('Custom AppBar'),
+            flexibleSpace: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(30),
+                      bottomRight: Radius.circular(30)),
+                  gradient: LinearGradient(
+                      colors: [Colors.red, Colors.blue],
+                      begin: Alignment.bottomCenter,
+                      end: Alignment.topCenter)),
+            ),
+          ),
