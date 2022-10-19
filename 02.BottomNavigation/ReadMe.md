@@ -9,3 +9,7 @@
 # 03. Customize Bottom Navigationbar
 
 <img width="356" alt="b3" src="https://user-images.githubusercontent.com/78470516/196722093-76184b09-bce6-4a28-acc9-8b6d69637cc1.PNG">
+
+# 04.CustomPaint bottomnavbar
+
+<img width="361" alt="b4" src="https://user-images.githubusercontent.com/78470516/196731346-bc6170a9-2d88-4a7f-ac57-30d7461ed50d.PNG">
