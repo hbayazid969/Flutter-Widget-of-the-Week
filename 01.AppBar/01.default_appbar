@@ -1,0 +1,19 @@
+appBar: AppBar(
+            elevation: 5,
+            actions: [
+             Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Icon(Icons.search),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Icon(Icons.favorite),
+              )
+            ],
+            centerTitle: true,
+            backgroundColor: Colors.red,
+            leading: Icon(Icons.menu),
+            title: Text('Flutter Appbar'),
+            //can hide toolbar backbutton
+            //automaticallyImplyLeading: true,
+          ),
