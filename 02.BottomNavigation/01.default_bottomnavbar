@@ -1,0 +1,79 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  static const List<Widget> _pages = <Widget>[
+    Center(
+      child: Icon(
+        Icons.home,
+        size: 100,
+      ),
+    ),
+    Center(
+      child: Icon(
+        Icons.search,
+        size: 100,
+      ),
+    ),
+    Center(
+      child: Icon(
+        Icons.shopping_cart,
+        size: 100,
+      ),
+    ),
+    Center(
+      child: Icon(
+        Icons.person,
+        size: 100,
+      ),
+    ),
+  ];
+  int selectedIndex = 0;
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          body: _pages[selectedIndex],
+          bottomNavigationBar: BottomNavigationBar(
+            onTap: (index) {
+              setState(() {
+                selectedIndex = index;
+              });
+            },
+            type: BottomNavigationBarType.fixed,
+            unselectedItemColor: Colors.white60,
+            selectedItemColor: Colors.white,
+            backgroundColor: Colors.red,
+            items: [
+              BottomNavigationBarItem(
+                  backgroundColor: Colors.red,
+                  icon: Icon(Icons.home),
+                  label: 'Home'),
+              BottomNavigationBarItem(
+                  backgroundColor: Colors.red,
+                  icon: Icon(Icons.search),
+                  label: 'search'),
+              BottomNavigationBarItem(
+                  backgroundColor: Colors.red,
+                  icon: Icon(Icons.shopping_cart),
+                  label: 'cart'),
+              BottomNavigationBarItem(
+                  backgroundColor: Colors.red,
+                  icon: Icon(Icons.person),
+                  label: 'profile'),
+            ],
+          ),
+        ));
+  }
+}
