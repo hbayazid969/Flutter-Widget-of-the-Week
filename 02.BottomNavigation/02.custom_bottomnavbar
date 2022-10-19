@@ -1,0 +1,73 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int selectedIndex = 1;
+  var pages = [
+    Center(child: Text('Home Page')),
+    Center(child: Text('Search Page')),
+    Center(child: Text('Profile Page')),
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: pages[selectedIndex],
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            setState(() {
+              selectedIndex = 1;
+            });
+          },
+          child: Icon(Icons.search),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        bottomNavigationBar: BottomAppBar(
+          shape: CircularNotchedRectangle(),
+          notchMargin: 10,
+          child: Container(
+            height: 60,
+            child: Padding(
+              padding: EdgeInsets.only(left: 30, right: 30, top: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedIndex = 0;
+                      });
+                    },
+                    child: Column(
+                      children: [Icon(Icons.home), Text('Home')],
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedIndex = 2;
+                      });
+                    },
+                    child: Column(
+                      children: [Icon(Icons.person), Text('Person')],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
